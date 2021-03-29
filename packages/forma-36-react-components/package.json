@@ -1,7 +1,7 @@
 {
   "name": "@contentful/forma-36-react-components",
   "description": "Contentful UI Component Library",
-  "version": "3.83.0",
+  "version": "3.86.0",
   "main": "dist/index.js",
   "module": "dist/esm/index.js",
   "style": "dist/styles.css",
@@ -66,7 +66,7 @@
     "rollup-plugin-postcss": "^4.0.0",
     "rollup-plugin-replace": "^2.1.1",
     "rollup-plugin-terser": "^4.0.4",
-    "semantic-release": "^17.2.3",
+    "semantic-release": "^17.4.2",
     "size-limit": "^4.5.5"
   },
   "repository": {
