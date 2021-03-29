@@ -1,8 +1,9 @@
 import React from 'react';
 import { SectionHeading, Paragraph } from '@contentful/f36-typography';
-import { IconButton, IconButtonProps } from './IconButton';
-import { iconName } from '../Icon/constants';
+import { Star } from '@contentful/f36-icons';
 import { Flex } from '@contentful/f36-core';
+
+import { IconButton, IconButtonProps } from './IconButton';
 
 // TODO align colors between Icon and IconButton? (warning is missing in IconButton)
 enum IconButtonTypes {
@@ -21,10 +22,10 @@ export default {
     propTypes: [IconButton['__docgenInfo']],
   },
   argTypes: {
+    as: { control: { disable: true } },
     className: { control: { disable: true } },
     testId: { control: { disable: true } },
     iconProps: { control: { disable: true } },
-    icon: { control: { type: 'select', options: iconName } },
     iconSize: {
       control: {
         type: 'select',
@@ -35,15 +36,15 @@ export default {
 };
 
 interface Args extends IconButtonProps {
-  icon: IconButtonProps['iconProps']['icon'];
+  as: IconButtonProps['iconProps']['as'];
   iconSize?: IconButtonProps['iconProps']['size'];
 }
 
-export const Basic = ({ icon, iconSize, ...args }: Args) => (
-  <IconButton iconProps={{ icon, size: iconSize }} {...args} />
+export const Basic = ({ as, iconSize, ...args }: Args) => (
+  <IconButton iconProps={{ as, size: iconSize }} {...args} />
 );
 Basic.args = {
-  icon: iconName.Star,
+  as: Star,
   iconSize: 'medium',
 };
 
@@ -62,7 +63,7 @@ export const Overview = () => (
         <Flex marginRight="spacingS">
           <IconButton
             iconProps={{
-              icon: 'Star',
+              as: Star,
             }}
             buttonType={IconButtonTypes[color]}
             label="Add New Element"
@@ -80,7 +81,7 @@ export const Overview = () => (
       <Flex marginRight="spacingS">
         <IconButton
           iconProps={{
-            icon: 'Star',
+            as: Star,
             size: 'tiny',
           }}
         />
@@ -88,7 +89,7 @@ export const Overview = () => (
       <Flex marginRight="spacingS">
         <IconButton
           iconProps={{
-            icon: 'Star',
+            as: Star,
             size: 'small',
           }}
         />
@@ -96,7 +97,7 @@ export const Overview = () => (
       <Flex marginRight="spacingS">
         <IconButton
           iconProps={{
-            icon: 'Star',
+            as: Star,
             size: 'medium',
           }}
         />
@@ -104,7 +105,7 @@ export const Overview = () => (
       <Flex marginRight="spacingS">
         <IconButton
           iconProps={{
-            icon: 'Star',
+            as: Star,
             size: 'large',
           }}
         />
@@ -115,7 +116,7 @@ export const Overview = () => (
     </Flex>
     <IconButton
       iconProps={{
-        icon: 'Star',
+        as: Star,
       }}
       buttonType="primary"
       label="Add New Element"
@@ -127,7 +128,7 @@ export const Overview = () => (
     </Flex>
     <IconButton
       iconProps={{
-        icon: 'Star',
+        as: Star,
       }}
       buttonType="primary"
       label="Add New Element"

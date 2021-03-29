@@ -1,19 +1,17 @@
 import React from 'react';
 import type { Meta, Story } from '@storybook/react/types-6-0';
+import { HeadingOne } from '@contentful/f36-icons';
 
 import { EditorToolbarButton } from './EditorToolbarButton';
 import type { EditorToolbarButtonProps } from './EditorToolbarButton';
-import { iconName } from './../../Icon/constants';
 
 export default {
   argTypes: {
     className: { control: { disable: true } },
     icon: {
       control: {
-        type: 'select',
-        options: Object.keys(iconName),
+        disable: true,
       },
-      defaultValue: Object.keys(iconName)[0],
     },
     label: {
       control: 'text',
@@ -30,5 +28,5 @@ export default {
 } as Meta;
 
 export const Default: Story<EditorToolbarButtonProps> = (args) => {
-  return <EditorToolbarButton {...args} />;
+  return <EditorToolbarButton {...args} icon={HeadingOne} />;
 };
