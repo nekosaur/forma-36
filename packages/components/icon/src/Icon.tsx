@@ -39,7 +39,7 @@ const sizes: { [key in IconSize]: { [key in 'height' | 'width']: string } } = {
   },
 };
 
-const variantFills: { [key in IconVariant]: string } = {
+const fills: { [key in IconVariant]: string } = {
   muted: tokens.colorTextLight,
   negative: tokens.colorNegative,
   positive: tokens.colorPositive,
@@ -101,7 +101,7 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(function Icon(
     className: cx(
       css({
         display: 'inline-block',
-        fill: variantFills[variant],
+        fill: fills[variant],
         height: sizes[size].height,
         width: trimmed ? 'auto' : sizes[size].width,
       }),

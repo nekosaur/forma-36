@@ -1,4 +1,8 @@
-export type { IconComponent } from '@contentful/f36-icon';
+export type {
+  IconComponent,
+  IconSize,
+  IconVariant,
+} from '@contentful/f36-icon';
 export { ArrowDown } from './ArrowDown';
 export { ArrowDownTrimmed } from './ArrowDownTrimmed';
 export { ArrowUp } from './ArrowUp';
